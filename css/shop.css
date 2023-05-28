@@ -1,0 +1,363 @@
+.cart{
+    float: right;
+  }
+  /* Style the navigation bar */
+  .navbar {
+      width: 100%;
+      background-color: #D68B00;
+      overflow: auto;
+    }
+    
+    /* Navbar links */
+    .navbar a {
+      float: left;
+      text-align: center;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    /* Navbar links on mouse-over */
+    .navbar a:hover {
+      background-color: #000;
+    }
+    
+    /* Current/active navbar link */
+    .active {
+      background-color:#855600;
+    }
+    
+    /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+    @media screen and (max-width: 500px) {
+      .navbar a {
+        float: none;
+        display: block;
+      }
+    }
+    /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #000;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .nav-right {
+    float: right;
+  }\200\300
+  * {box-sizing:border-box}
+  
+body{
+    background-color:	#FFD78C ;
+  }
+  .marquee div {
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    left: 100%
+    overflow: hidden;
+    animation: marquee 5s linear infinite;
+  }
+
+ @keyframes marquee {
+    0% {left: 100%;}
+    100% {left: 0;}
+}
+  .WRAPPER1 {
+ 
+    margin:0 auto;
+ 
+    width:880px;
+ 
+    padding:30px;
+
+ 
+    overflow:hidden; /* 當內部有 <div> 使用 float 的時候，父層的 <div> 高度會壞掉 */
+                     /* 使用 overflow:hidden; 是最簡單破解這個問題的方法 */
+}
+ 
+#SIDE {
+ 
+    width:170px; /* <div> 要設定寬度，才能配合 float 做水平靠左或靠右排列 */
+ 
+    float:left; /* 使用 float 讓這個 <div> 做水平靠左排列 */
+    padding: 20px;
+}
+ .side-img{ float:left;
+            margin-top: 20px;            
+          }
+#CONTENT {
+ 
+    width:auto; /* 設定 auto 就會自動伸縮，這是 <div> 的預設值，所以可以省略不寫 */
+ 
+    margin-left:170px; /* 上面的 #SIDE <div> 寬度是 170px */
+                           /* 這個 #CONTENT 設定左間距可以避免多出來的內容文字和上面的 <div> 重疊 */
+    padding: 20px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: #000;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background:grey ;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+ /* Three columns side by side */
+.column {
+    float: left;
+    width: 27%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .rate {
+    color: orange;
+  }
+  /* Some left and right padding inside the container */
+  .container2 {
+    padding: 0 16px;
+    background-color:#FFFFFF;
+    height: 4cm;
+  }
+  
+  /* Clear floats */
+  .container2::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+    .title2 {
+
+	text-align:center;
+    font-size: 20px;
+  }
+  .button2 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button2:hover {
+    background-color: #555;
+  }
+  footer{
+    background-color:#FFD78C ;
+    height: 100px;
+    width: 100%;
+    margin-top:10px;
+  }
+  
+  .footer-font{
+    font-size: 20px;
+  }
+  .footer-text{
+    float: left;
+    font-size:14px;
+    color:#000;
+    line-height: 20px;
+    margin-top:10px;
+    padding: 30px;
+  }
+  
+  .footer-li{
+    float: left;
+    margin-right: 1em;
+    margin-top:10px;
+    line-height: 30px;
+    padding: 30px;
+  }
+  .bi::before {
+    display: inline-block;
+    content: "";
+    vertical-align: -.125em;
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+  .footer-li{
+    float: left;
+    margin-right: 1em;
+    margin-top:10px;
+    line-height: 30px;
+    padding: 30px;
+  }
+  .footer-brand{
+    float: left;
+    margin-right: 1em;
+    margin-top:9px;
+    line-height: 30px;
+    padding: 30px;
+    font-size: 20px;
+  } 
+  .footer-float{
+    float: left;
+  }
+
